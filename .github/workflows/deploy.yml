@@ -1,0 +1,22 @@
+name: Deploy
+
+# Run deployment to Github packages on commits to the `main` branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Java for publishing
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Publish to GitHub Packages
+        env:
+          OSSRH_USER: ${{ secrets.OSSRH_USER }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        run: mvn -B deploy -s settings.xml

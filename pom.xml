@@ -112,11 +112,6 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>${kotlin}</mainClass>
-                        </manifest>
-                    </archive>
                     <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
