@@ -85,13 +85,13 @@ class Linguist(linguistFile: File? = null) {
     fun isOf(path: String, vararg languages: String) = if (languages.isEmpty()) {
         false
     } else {
-        val lowerCaseLanguages = languages.map { it.toLowerCase() }
-        getLanguages(path).flatMap { it.aliases + it.name + it.group }.mapNotNull { it?.toLowerCase() }
+        val lowerCaseLanguages = languages.map { it.lowercase() }
+        getLanguages(path).flatMap { it.aliases + it.name + it.group }.mapNotNull { it?.lowercase() }
             .any(lowerCaseLanguages::contains)
     }
 
     fun isRegistered(language: String) =
-        languages.flatMap { it.value.aliases + it.key }.map { it.toLowerCase() }.contains(language.toLowerCase())
+        languages.flatMap { it.value.aliases + it.key }.map { it.lowercase() }.contains(language.lowercase())
 
     private fun getGithubLinguistFile() = URL(githubLinguistFileUrl).readText()
 
