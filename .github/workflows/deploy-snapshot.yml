@@ -1,7 +1,7 @@
-name: Deploy Release
+name: Deploy Snapshot
 on:
   push:
-    tags: ['v*']
+    branches: [main]
 
 jobs:
   deploy:
@@ -18,12 +18,7 @@ jobs:
           server-password: SONATYPE_TOKEN
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
-      - name: Set version from tag
-        run: |
-          VERSION=${GITHUB_REF_NAME#v}
-          ./mvnw versions:set -DnewVersion=$VERSION -DgenerateBackupPoms=false
-      - name: Deploy
-        run: ./mvnw deploy -P release
+      - run: ./mvnw deploy -P release
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_TOKEN: ${{ secrets.SONATYPE_TOKEN }}
