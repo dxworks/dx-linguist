@@ -3,7 +3,7 @@
 A Kotlin/JVM library for mapping file extensions and filenames to programming languages based on [GitHub Linguist](https://github.com/github/linguist).
 
 [![Build](https://github.com/dxworks/dx-linguist/actions/workflows/build.yml/badge.svg)](https://github.com/dxworks/dx-linguist/actions/workflows/build.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/org.dxworks/dx-linguist)](https://central.sonatype.com/artifact/org.dxworks/dx-linguist)
+[![Maven Central](https://img.shields.io/maven-central/v/org.dxworks/dx-linguist)](https://central.sonatype.com/artifact/org.dxworks.utils/dx-linguist)
 
 ## Installation
 
