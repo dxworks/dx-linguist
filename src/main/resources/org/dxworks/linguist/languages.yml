@@ -953,10 +953,6 @@ GAP:
   - ".gd"
   - ".gi"
   - ".tst"
-GCC Machine Description:
-  type: "programming"
-  extensions:
-  - ".md"
 GDB:
   type: "programming"
   extensions:
@@ -1162,12 +1158,6 @@ Groovy Server Pages:
   aliases:
   - "gsp"
   - "java server page"
-HAProxy:
-  type: "data"
-  extensions:
-  - ".cfg"
-  filenames:
-  - "haproxy.cfg"
 HCL:
   type: "programming"
   extensions:
@@ -1246,13 +1236,6 @@ HXML:
   type: "data"
   extensions:
   - ".hxml"
-Hack:
-  type: "programming"
-  extensions:
-  - ".hack"
-  - ".hh"
-  - ".hhi"
-  - ".php"
 Haml:
   type: "markup"
   extensions:
@@ -1312,20 +1295,6 @@ IGOR Pro:
   aliases:
   - "igor"
   - "igorpro"
-INI:
-  type: "data"
-  extensions:
-  - ".ini"
-  - ".cfg"
-  - ".dof"
-  - ".lektorproject"
-  - ".prefs"
-  - ".pro"
-  - ".properties"
-  filenames:
-  - "buildozer.spec"
-  aliases:
-  - "dosini"
 IRC log:
   type: "data"
   extensions:
@@ -1494,6 +1463,26 @@ Java Properties:
   type: "data"
   extensions:
   - ".properties"
+INI:
+  type: "data"
+  extensions:
+  - ".ini"
+  - ".cfg"
+  - ".dof"
+  - ".lektorproject"
+  - ".prefs"
+  - ".pro"
+  - ".properties"
+  filenames:
+  - "buildozer.spec"
+  aliases:
+  - "dosini"
+HAProxy:
+  type: "data"
+  extensions:
+  - ".cfg"
+  filenames:
+  - "haproxy.cfg"
 Java Server Pages:
   type: "programming"
   group: "Java"
@@ -1690,6 +1679,15 @@ LilyPond:
   extensions:
   - ".ly"
   - ".ily"
+Objective-C:
+  type: "programming"
+  extensions:
+  - ".m"
+  - ".h"
+  aliases:
+  - "obj-c"
+  - "objc"
+  - "objectivec"
 Limbo:
   type: "programming"
   extensions:
@@ -1887,6 +1885,10 @@ Markdown:
   - "contents.lr"
   aliases:
   - "pandoc"
+GCC Machine Description:
+  type: "programming"
+  extensions:
+  - ".md"
 Marko:
   type: "markup"
   extensions:
@@ -2000,17 +2002,6 @@ MoonScript:
   type: "programming"
   extensions:
   - ".moon"
-Motorola 68K Assembly:
-  type: "programming"
-  group: "Assembly"
-  extensions:
-  - ".asm"
-  - ".i"
-  - ".inc"
-  - ".s"
-  - ".x68"
-  aliases:
-  - "m68k"
 Muse:
   type: "prose"
   extensions:
@@ -2174,15 +2165,6 @@ ObjectScript:
   type: "programming"
   extensions:
   - ".cls"
-Objective-C:
-  type: "programming"
-  extensions:
-  - ".m"
-  - ".h"
-  aliases:
-  - "obj-c"
-  - "objc"
-  - "objectivec"
 Objective-C++:
   type: "programming"
   extensions:
@@ -2252,11 +2234,6 @@ OpenSCAD:
   type: "programming"
   extensions:
   - ".scad"
-OpenStep Property List:
-  type: "data"
-  extensions:
-  - ".plist"
-  - ".glyphs"
 OpenType Feature File:
   type: "data"
   extensions:
@@ -2305,30 +2282,13 @@ PHP:
   - "Phakefile"
   aliases:
   - "inc"
-PLSQL:
+Hack:
   type: "programming"
   extensions:
-  - ".pls"
-  - ".bdy"
-  - ".ddl"
-  - ".fnc"
-  - ".pck"
-  - ".pkb"
-  - ".pks"
-  - ".plb"
-  - ".plsql"
-  - ".prc"
-  - ".spc"
-  - ".sql"
-  - ".tpb"
-  - ".tps"
-  - ".trg"
-  - ".vw"
-PLpgSQL:
-  type: "programming"
-  extensions:
-  - ".pgsql"
-  - ".sql"
+  - ".hack"
+  - ".hh"
+  - ".hhi"
+  - ".php"
 POV-Ray SDL:
   type: "programming"
   extensions:
@@ -2776,11 +2736,6 @@ Ren'Py:
   - ".rpy"
   aliases:
   - "renpy"
-RenderScript:
-  type: "programming"
-  extensions:
-  - ".rs"
-  - ".rsh"
 Rich Text Format:
   type: "markup"
   extensions:
@@ -2930,6 +2885,11 @@ Rust:
   extensions:
   - ".rs"
   - ".rs.in"
+RenderScript:
+  type: "programming"
+  extensions:
+  - ".rs"
+  - ".rsh"
 SAS:
   type: "programming"
   extensions:
@@ -2965,6 +2925,30 @@ SQL:
   - ".tab"
   - ".udf"
   - ".viw"
+PLSQL:
+  type: "programming"
+  extensions:
+  - ".pls"
+  - ".bdy"
+  - ".ddl"
+  - ".fnc"
+  - ".pck"
+  - ".pkb"
+  - ".pks"
+  - ".plb"
+  - ".plsql"
+  - ".prc"
+  - ".spc"
+  - ".sql"
+  - ".tpb"
+  - ".tps"
+  - ".trg"
+  - ".vw"
+PLpgSQL:
+  type: "programming"
+  extensions:
+  - ".pgsql"
+  - ".sql"
 SQLPL:
   type: "programming"
   extensions:
@@ -3420,6 +3404,17 @@ Unix Assembly:
   extensions:
   - ".s"
   - ".ms"
+Motorola 68K Assembly:
+  type: "programming"
+  group: "Assembly"
+  extensions:
+  - ".asm"
+  - ".i"
+  - ".inc"
+  - ".s"
+  - ".x68"
+  aliases:
+  - "m68k"
 Uno:
   type: "programming"
   extensions:
@@ -3750,6 +3745,11 @@ XML Property List:
   - ".tmPreferences"
   - ".tmSnippet"
   - ".tmTheme"
+OpenStep Property List:
+  type: "data"
+  extensions:
+  - ".plist"
+  - ".glyphs"
 XPages:
   type: "data"
   extensions:
