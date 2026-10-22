@@ -46,7 +46,11 @@ The CI workflow extracts the version from the tag (strips the `v` prefix) and pu
 1. On initialization, `Linguist` loads language definitions from `~/.linguist/languages.yml`
 2. If the file doesn't exist, it's automatically downloaded from GitHub Linguist
 3. Languages are indexed by extension and filename for fast lookup
-4. `getLanguages(path)` returns matching languages for any file path
+4. `getLanguages(path)` returns matching languages for any file path, in file order
+
+### Bundled languages.yml
+
+`src/main/resources/org/dxworks/linguist/languages.yml` is the shared language file of the dxworks tools (dude, insider). For extensions shared by several languages, the usual language is listed first (`.php` PHP before Hack). Keep that order when updating the file; `LinguistTest` checks it.
 
 ## Tech Stack
 

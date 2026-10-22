@@ -58,6 +58,12 @@ linguist.isOf("style.css", "JavaScript")  // false
 val linguist = Linguist(File("/path/to/custom/languages.yml"))
 ```
 
+### Bundled Languages File
+
+The jar contains a `languages.yml` at `org/dxworks/linguist/languages.yml`. dxworks tools (dude, insider) ship it as their language file, so they all read the same definitions.
+
+Some extensions belong to several languages (`.php` is Hack and PHP), and `getLanguages()` returns them in file order. In the bundled file the usual language comes first (`.php` PHP, `.rs` Rust, `.md` Markdown, `.sql` SQL), so the file is not fully alphabetical. Keep that order when you update it.
+
 ### Update Language Definitions
 
 ```kotlin
